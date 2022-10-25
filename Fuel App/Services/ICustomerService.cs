@@ -15,5 +15,7 @@ namespace Fuel_App.Services
         void RemoveCustomerFromTheQueue(string Id);
 
         void ExitCustomerFromTheQueue(string Id);
+
+        Customer GetWaitTime(string Id, string ArrivalTime, string? DepartureTime);
     }
 }

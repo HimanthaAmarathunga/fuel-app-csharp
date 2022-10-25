@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Downloads\\Fuel App\\Fuel App\\Fuel App.csproj": {}
+    "C:\\Users\\Himantha Amarathunga\\Documents\\SLIIT Material\\Y4S2\\EAD\\Fuel App\\fuel-app-csharp\\Fuel App\\Fuel App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Downloads\\Fuel App\\Fuel App\\Fuel App.csproj": {
+    "C:\\Users\\Himantha Amarathunga\\Documents\\SLIIT Material\\Y4S2\\EAD\\Fuel App\\fuel-app-csharp\\Fuel App\\Fuel App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Downloads\\Fuel App\\Fuel App\\Fuel App.csproj",
+        "projectUniqueName": "C:\\Users\\Himantha Amarathunga\\Documents\\SLIIT Material\\Y4S2\\EAD\\Fuel App\\fuel-app-csharp\\Fuel App\\Fuel App.csproj",
         "projectName": "Fuel App",
-        "projectPath": "C:\\Users\\DELL\\Downloads\\Fuel App\\Fuel App\\Fuel App.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Downloads\\Fuel App\\Fuel App\\obj\\",
+        "projectPath": "C:\\Users\\Himantha Amarathunga\\Documents\\SLIIT Material\\Y4S2\\EAD\\Fuel App\\fuel-app-csharp\\Fuel App\\Fuel App.csproj",
+        "packagesPath": "C:\\Users\\Himantha Amarathunga\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Himantha Amarathunga\\Documents\\SLIIT Material\\Y4S2\\EAD\\Fuel App\\fuel-app-csharp\\Fuel App\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Himantha Amarathunga\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/e-vis/a73aec65-3042-4a88-a530-5e028604112e/_packaging/PermAssist_Feed/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {

@@ -45,5 +45,11 @@ namespace Fuel_App.Services
         {
             _customers.DeleteOne(customer => customer.Id == Id);
         }
+
+        public Customer GetWaitTime(string Id, string arrivalTime, string? departureTime)
+        {
+            return _customers.Find(customer => customer.Id == Id &&
+            customer.ArrivalTime == arrivalTime && customer.DepartureTime == departureTime).FirstOrDefault();
+        }
     }
 }
