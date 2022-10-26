@@ -26,7 +26,9 @@ namespace Fuel_App.Controllers
         /// <summary>
         /// Get List of Fuel Types
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Fuel type list
+        /// </returns>
         [HttpGet("GetFuelTypesList")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<FuelType>> GetFuelTypesList()
@@ -38,7 +40,9 @@ namespace Fuel_App.Controllers
         /// Get Fuel Type by Id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Fuel type
+        /// </returns>
         [HttpGet("{id}/GetFuelTypeById")]
         public ActionResult<FuelType> GetFuelTypeById(string id)
         {
@@ -56,7 +60,9 @@ namespace Fuel_App.Controllers
         /// Add Fuel Type
         /// </summary>
         /// <param name="fuelType"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Add fuel type
+        /// </returns>
         [HttpPost("AddFuelType")]
         public ActionResult<FuelType> AddFuelType([FromBody] FuelType fuelType)
         {
@@ -71,7 +77,9 @@ namespace Fuel_App.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="fuelType"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// update fuel type
+        /// </returns>
         [HttpPut("{id}/UpdateFuelTypeTimes")]
         public ActionResult UpdateFuelTypeTimes(string id, [FromBody] FuelType fuelType)
         {

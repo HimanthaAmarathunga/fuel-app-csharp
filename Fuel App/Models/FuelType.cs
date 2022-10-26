@@ -12,6 +12,7 @@ using System;
 
 namespace Fuel_App.Models
 {
+    //Fuel type model
     [BsonIgnoreExtraElements]
     public class FuelType
     {

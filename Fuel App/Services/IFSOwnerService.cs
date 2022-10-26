@@ -15,14 +15,12 @@ namespace Fuel_App.Services
         /// <summary>
         /// Get Fuel Station Details List
         /// </summary>
-        /// <returns></returns>
         List<FSOwner> GetFuelStationDetailsList();
 
 
         /// <summary>
         /// Get Fuel Station Details List Filter by Fuel Types
         /// </summary>
-        /// <returns></returns>
         List<FSOwner> GetFuelStationDetailsListFilterByFuelTypes(string location);
 
 
@@ -30,7 +28,6 @@ namespace Fuel_App.Services
         /// Get Fuel Station Detail by Id
         /// </summary>
         /// <param name="stationId"></param>
-        /// <returns></returns>
         FSOwner GetFuelStationDetailById(string stationId);
 
 
@@ -38,7 +35,6 @@ namespace Fuel_App.Services
         /// Add Fuel Station
         /// </summary>
         /// <param name="fSOwner"></param>
-        /// <returns></returns>
         FSOwner AddStation(FSOwner fSOwner);
 
 

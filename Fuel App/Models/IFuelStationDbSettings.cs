@@ -10,6 +10,7 @@ namespace Fuel_App.Models
 {
     public interface IFuelStationDbSettings
     {
+        //Interface for database settings
         string CustomerDataCollectionName { get; set; }
         string FuelStationDataCollectionName { get; set; }
         string FuelTypeDataCollectionName { get; set; }

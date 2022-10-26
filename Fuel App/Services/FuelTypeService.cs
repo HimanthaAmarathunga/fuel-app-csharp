@@ -24,7 +24,9 @@ namespace Fuel_App.Services
         /// <summary>
         /// Get Fuel Types List
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Fuel type List
+        /// </returns>
         public List<FuelType> GetFuelTypesList()
         {
             return _fuelType.Find(fuelType => true).ToList();
@@ -35,7 +37,9 @@ namespace Fuel_App.Services
         /// Get Fuel Type by Id
         /// </summary>
         /// <param name="fuelTypeId"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Fuel type
+        /// </returns>
         public FuelType GetFuelTypeById(string fuelTypeId)
         {
             return _fuelType.Find(fuelType => fuelType.fuelTypeId == fuelTypeId).FirstOrDefault();
@@ -46,7 +50,9 @@ namespace Fuel_App.Services
         /// Add Fuel Type
         /// </summary>
         /// <param name="fuelType"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Add Fuel type
+        /// </returns>
         public FuelType AddFuelType(FuelType fuelType)
         {
             _fuelType.InsertOne(fuelType);
@@ -60,6 +66,9 @@ namespace Fuel_App.Services
         /// </summary>
         /// <param name="id"></param>
         /// <param name="fuelType"></param>
+        /// <returns>
+        /// Update fuel type
+        /// </returns>
         public void UpdateFuelTypeTimes(string id, FuelType fuelType)
         {
             var test = _fuelType.Find(fuelType => fuelType.fuelTypeId == id)

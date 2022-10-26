@@ -15,7 +15,6 @@ namespace Fuel_App.Services
         /// <summary>
         /// Get List of Customers
         /// </summary>
-        /// <returns></returns>
         List<Customer> GetListOfCustomers();
 
 
@@ -23,7 +22,6 @@ namespace Fuel_App.Services
         /// Get Customer by Id
         /// </summary>
         /// <param name="Id"></param>
-        /// <returns></returns>
         Customer GetCustomerById(string Id);
 
 
@@ -31,7 +29,6 @@ namespace Fuel_App.Services
         /// Add Customer to the Queue
         /// </summary>
         /// <param name="customer"></param>
-        /// <returns></returns>
         Customer AddCustomerToTheQueue(Customer customer);
 
 
@@ -63,7 +60,6 @@ namespace Fuel_App.Services
         /// <param name="Id"></param>
         /// <param name="ArrivalTime"></param>
         /// <param name="DepartureTime"></param>
-        /// <returns></returns>
         Customer GetWaitTime(string Id, string ArrivalTime, string? DepartureTime);
     }
 }

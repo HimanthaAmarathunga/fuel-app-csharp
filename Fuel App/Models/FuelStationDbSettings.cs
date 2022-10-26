@@ -10,6 +10,7 @@ namespace Fuel_App.Models
 {
     public class FuelStationDbSettings : IFuelStationDbSettings
     {
+        //Database settings
         public string CustomerDataCollectionName { get; set; } = String.Empty;
         public string FuelStationDataCollectionName { get; set; } = String.Empty;
         public string FuelTypeDataCollectionName { get; set; } = String.Empty;

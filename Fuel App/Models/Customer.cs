@@ -15,8 +15,8 @@ namespace Fuel_App.Models
     [BsonIgnoreExtraElements]
     public class Customer
     {
+        //Customer Model
         [BsonId]
-        //[BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         public string NIC { get; set; }
         public string FirstName { get; set; }

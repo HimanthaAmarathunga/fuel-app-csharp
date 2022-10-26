@@ -15,6 +15,7 @@ namespace Fuel_App.Models
     [BsonIgnoreExtraElements]
     public class FSOwner
     {
+        //Fuel station Model
         [BsonId]
         public string stationId { get; set; }
         public string? location { get; set; }

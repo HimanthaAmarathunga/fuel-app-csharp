@@ -9,9 +9,8 @@
 using Fuel_App.Models;
 using Fuel_App.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 
 namespace Fuel_App.Controllers
 {
@@ -28,7 +27,9 @@ namespace Fuel_App.Controllers
         /// <summary>
         /// Get List of Customers
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Customer List
+        /// </returns>
         [HttpGet("GetListOfCustomers")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<Customer>> GetListOfCustomers()
@@ -41,7 +42,9 @@ namespace Fuel_App.Controllers
         /// Get Customer by Id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Customer by Id
+        /// </returns>
         [HttpGet("{id}/GetCustomerById")]
         public ActionResult<Customer> GetCustomerById(string id)
         {
@@ -60,7 +63,9 @@ namespace Fuel_App.Controllers
         /// Add a Customer to the Queue
         /// </summary>
         /// <param name="customer"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// New queue member 
+        /// </returns>
         [HttpPost("AddCustomerToTheQueue")]
         public ActionResult<Customer> AddCustomerToTheQueue([FromBody] Customer customer)
         {
@@ -75,7 +80,9 @@ namespace Fuel_App.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="customer"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Updated departure time of the customer
+        /// </returns>
         [HttpPut("{id}/UpdateDepartureTime")]
         public ActionResult UpdateDepartureTime(string id, [FromBody] Customer customer)
         {
@@ -116,7 +123,9 @@ namespace Fuel_App.Controllers
         /// Exit Customer from the Queue
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Customer exits from the queue without pumping fuel
+        /// </returns>
         [HttpDelete("{id}/ExitCustomerFromTheQueue")]
         public ActionResult<Customer> ExitCustomerFromTheQueue(string id)
         {

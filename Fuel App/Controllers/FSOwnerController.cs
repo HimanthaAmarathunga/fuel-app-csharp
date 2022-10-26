@@ -10,7 +10,7 @@ using Fuel_App.Models;
 using Fuel_App.Services;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 
 namespace Fuel_App.Controllers
 {
@@ -28,7 +28,9 @@ namespace Fuel_App.Controllers
         /// <summary>
         /// Get List of Fuel Station Details List
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Fuel station list
+        /// </returns>
         [HttpGet("GetFuelStationDetailsList")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<FSOwner>> GetFuelStationDetailsList()
@@ -40,7 +42,9 @@ namespace Fuel_App.Controllers
         /// <summary>
         /// Get Fuel Station Details List Filter by Fuel Types
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// List of fuel by fuel type
+        /// </returns>
         [HttpGet("{location}/GetFuelStationDetailsListFilterByFuelTypes")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<List<FSOwner>> GetFuelStationDetailsListFilterByFuelTypes(string location)
@@ -53,7 +57,9 @@ namespace Fuel_App.Controllers
         /// Get Fuel Station Detail by Id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// Fuel station details
+        /// </returns>
         [HttpGet("{id}/GetFuelStationDetailById")]
         public ActionResult<FSOwner> GetFuelStationDetailById(string id)
         {
@@ -93,7 +99,9 @@ namespace Fuel_App.Controllers
         /// Add Station
         /// </summary>
         /// <param name="fsowner"></param>
-        /// <returns></returns>
+        /// <returns>
+        /// New station
+        /// </returns>
         [HttpPost("AddStation")]
         public ActionResult<FSOwner> AddStation([FromBody] FSOwner fsowner)
         {
