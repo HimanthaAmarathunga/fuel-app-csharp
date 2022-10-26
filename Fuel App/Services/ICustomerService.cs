@@ -57,9 +57,7 @@ namespace Fuel_App.Services
         /// <summary>
         /// Get Wait Time
         /// </summary>
-        /// <param name="Id"></param>
-        /// <param name="ArrivalTime"></param>
-        /// <param name="DepartureTime"></param>
-        Customer GetWaitTime(string Id, string ArrivalTime, string? DepartureTime);
+        /// <returns></returns>
+        public int GetWaitTime();
     }
 }

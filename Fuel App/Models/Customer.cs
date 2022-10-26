@@ -21,6 +21,6 @@ namespace Fuel_App.Models
         public string NIC { get; set; }
         public string FirstName { get; set; }
         public string ArrivalTime { get; set; } = DateTime.Now.ToString("t");
-        public string? DepartureTime { get; set; } = DateTime.Now.ToString("t");
+        public string? DepartureTime { get; set; } 
     }
 }

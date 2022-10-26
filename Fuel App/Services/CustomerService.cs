@@ -106,15 +106,16 @@ namespace Fuel_App.Services
         /// <summary>
         /// Get Wait Time
         /// </summary>
-        /// <param name="Id"></param>
-        /// <param name="arrivalTime"></param>
-        /// <param name="departureTime"></param>
-        /// <returns>
-        /// Wait time</returns>
-        public Customer GetWaitTime(string Id, string arrivalTime, string? departureTime)
+        /// <returns></returns>
+        public int GetWaitTime()
         {
-            return _customers.Find(customer => customer.Id == Id &&
-            customer.ArrivalTime == arrivalTime && customer.DepartureTime == departureTime).FirstOrDefault();
+            var waitiingCustomersCount = _customers.Find(customer => true).ToList()
+                                                   .Where(c => c.DepartureTime == null).ToList()
+                                                   .Count(); 
+
+            var waitiingTime = waitiingCustomersCount * 3;
+
+            return waitiingTime;
         }
     }
 }
