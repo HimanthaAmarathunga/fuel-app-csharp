@@ -139,5 +139,16 @@ namespace Fuel_App.Controllers
 
             return Ok($"Customer with Id = {id} deleted"); ;
         }
+
+
+        /// <summary>
+        /// Get Wait Time
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("GetWaitTime")]
+        public ActionResult<int> GetWaitTime()
+        {
+            return customerService.GetWaitTime();
+        }
     }
 }
