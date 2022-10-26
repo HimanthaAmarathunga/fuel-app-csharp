@@ -115,7 +115,7 @@ namespace Fuel_App.Controllers
 
             customerService.RemoveCustomerFromTheQueue(customer.Id);
 
-            return Ok($"Customer with Id = {id} deleted"); ;
+            return Ok($"Customer with Id = {id} deleted");
         }
 
 
@@ -137,7 +137,7 @@ namespace Fuel_App.Controllers
 
             customerService.ExitCustomerFromTheQueue(customer.Id);
 
-            return Ok($"Customer with Id = {id} deleted"); ;
+            return Ok($"Customer with Id = {id} deleted");
         }
 
 

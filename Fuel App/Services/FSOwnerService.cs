@@ -65,7 +65,6 @@ namespace Fuel_App.Services
         public FSOwner GetFuelStationDetailById(string stationId)
         {
             return _fsOwner.Find(fsowner => fsowner.stationId == stationId).FirstOrDefault();
-
         }
 
 
@@ -96,19 +95,6 @@ namespace Fuel_App.Services
         {
             var test = _fsOwner.Find(fsowner => fsowner.stationId == id)
                                .FirstOrDefault();
-            /*if (test.fuelTypeId == "1")
-            {
-                var t = _fsOwner.Find(fsowner => fsowner.stationId == id)
-                                .FirstOrDefault();
-            }
-            else if (test.fuelTypeId == "2")
-            {
-
-            }
-            test.fuelTypeId = fSOwner.fuelTypeId;
-            test.fuelArrivalTime = fSOwner.fuelArrivalTime;
-            test.fuelFinishTime = fSOwner.fuelFinishTime;*/
-            //_fsOwner.UpdateOne(test);
 
             _fsOwner.ReplaceOne(fSOwner => fSOwner.stationId == id, fSOwner);
         }
