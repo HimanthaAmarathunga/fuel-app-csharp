@@ -4,6 +4,7 @@
     {
         string CustomerDataCollectionName { get; set; }
         string FuelStationDataCollectionName { get; set; }
+        string FuelTypeDataCollectionName { get; set; }
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }

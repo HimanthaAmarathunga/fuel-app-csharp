@@ -18,6 +18,7 @@ builder.Services.AddSingleton<IMongoClient>( s =>
 
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IFSOwnerService, FSOwnerService>();
+builder.Services.AddScoped<IFuelTypeService, FuelTypeService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

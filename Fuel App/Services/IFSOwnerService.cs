@@ -7,6 +7,9 @@ namespace Fuel_App.Services
         List<FSOwner> GetFuelStationDetailsList();
 
         FSOwner GetFuelStationDetailById(string stationId);
+
         FSOwner AddStation(FSOwner fSOwner);
+
+        void UpdateFuelStatus(string id, FSOwner fSOwner);
     }
 }

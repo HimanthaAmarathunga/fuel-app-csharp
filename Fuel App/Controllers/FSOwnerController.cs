@@ -46,10 +46,25 @@ namespace Fuel_App.Controllers
         }
 
 
-        // PUT api/<FSOwnerController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        /// <summary>
+        /// Update Departure Time
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="fsOwner"></param>
+        /// <returns></returns>
+        [HttpPut("{id}/UpdateFuelStatus")]
+        public ActionResult UpdateFuelStatus(string id, [FromBody] FSOwner fSOwner)
         {
+            var fuelStatus = fSOwnerService.GetFuelStationDetailById(id);
+
+            if (fuelStatus == null)
+            {
+                return NotFound($"Fuel Status is empty with Id = {id}");
+            }
+
+            fSOwnerService.UpdateFuelStatus(id, fSOwner);
+
+            return NoContent();
         }
 
 
