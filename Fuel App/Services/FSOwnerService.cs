@@ -12,38 +12,55 @@ namespace Fuel_App.Services
             _fsOwner = database.GetCollection<FSOwner>(fuelStationDbSettings.FuelStationDataCollectionName);
         }
 
+
+        /// <summary>
+        /// Get Fuel Station Details List
+        /// </summary>
+        /// <returns></returns>
+        public List<FSOwner> GetFuelStationDetailsList()
+        {
+            return _fsOwner.Find(fsowner => true).ToList();
+        }
+
+
+        /// <summary>
+        /// Get Fuel Station Details List Filter by Fuel Types
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns></returns>
+        public List<FSOwner> GetFuelStationDetailsListFilterByFuelTypes(string location)
+        {
+            var fSOwners = _fsOwner.Find(fsowner => true).ToList();
+
+            var fuelStation = fSOwners.Where(fsowner => fsowner.location == location)
+                               .FirstOrDefault();
+
+            if (fuelStation.fuelFinishTime == null)
+            {
+                return fSOwners.Where(c => c.fuelFinishTime == null).ToList(); 
+            }
+
+            return null; 
+        }
+
+
+        /// <summary>
+        /// Get Fuel Station Detail by Id
+        /// </summary>
+        /// <param name="stationId"></param>
+        /// <returns></returns>
         public FSOwner GetFuelStationDetailById(string stationId)
         {
             return _fsOwner.Find(fsowner => fsowner.stationId == stationId).FirstOrDefault();
 
         }
 
-        public List<FSOwner> GetFuelStationDetailsList()
-        {
-            return _fsOwner.Find(fsowner => true).ToList();
 
-            //if (result.fuelTypeId = 1)
-            //{
-            //    if (result.fuelArrivalTime != null && result.fuelFinishTime == null)
-            //    {
-            //        GetFuelStationDetailsList();
-            //    }
-            //    else if (result.fuelFinishTime != null)
-            //    {
-            //        var status = "Fuel status not found";
-            //        return status;
-            //    }
-            //}
-            //if (result.fuelType == "Diesel")
-            //{
-            //    if (result.fuelArrivalTime != null && result.fuelFinishTime == null)
-            //    {
-            //        GetFuelStationDetailsList();
-            //    }
-            //}
-            //return result;
-        }
-
+        /// <summary>
+        /// Add Fuel Station
+        /// </summary>
+        /// <param name="fSOwner"></param>
+        /// <returns></returns>
         public FSOwner AddStation(FSOwner fSOwner)
         {
             _fsOwner.InsertOne(fSOwner);
@@ -51,21 +68,31 @@ namespace Fuel_App.Services
             return fSOwner;
         }
 
+
+        /// <summary>
+        /// Update Fuel Status
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="fSOwner"></param>
         public void UpdateFuelStatus(string id, FSOwner fSOwner)
         {
             var test = _fsOwner.Find(fsowner => fsowner.stationId == id)
                                .FirstOrDefault();
+            /*if (test.fuelTypeId == "1")
+            {
+                var t = _fsOwner.Find(fsowner => fsowner.stationId == id)
+                                .FirstOrDefault();
+            }
+            else if (test.fuelTypeId == "2")
+            {
 
-            //GetFuelStationDetailById(id);
-
-            test.fuelType = fSOwner.fuelType;
+            }
+            test.fuelTypeId = fSOwner.fuelTypeId;
             test.fuelArrivalTime = fSOwner.fuelArrivalTime;
-            test.fuelFinishTime = fSOwner.fuelFinishTime;
+            test.fuelFinishTime = fSOwner.fuelFinishTime;*/
             //_fsOwner.UpdateOne(test);
 
             _fsOwner.ReplaceOne(fSOwner => fSOwner.stationId == id, fSOwner);
-
-           // return test; 
         }
 
     }

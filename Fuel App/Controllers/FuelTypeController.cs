@@ -44,12 +44,39 @@ namespace Fuel_App.Controllers
         }
 
 
+        /// <summary>
+        /// Add Fuel Type
+        /// </summary>
+        /// <param name="fuelType"></param>
+        /// <returns></returns>
         [HttpPost("AddFuelType")]
         public ActionResult<FuelType> AddFuelType([FromBody] FuelType fuelType)
         {
             fuelTypeService.AddFuelType(fuelType);
 
             return CreatedAtAction(nameof(GetFuelTypeById), new { id = fuelType.fuelTypeId }, fuelType);
+        }
+
+
+        /// <summary>
+        /// Update Fuel Type Times
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="fuelType"></param>
+        /// <returns></returns>
+        [HttpPut("{id}/UpdateFuelTypeTimes")]
+        public ActionResult UpdateFuelTypeTimes(string id, [FromBody] FuelType fuelType)
+        {
+            var fuelStatus = fuelTypeService.GetFuelTypeById(id);
+
+            if (fuelStatus == null)
+            {
+                return NotFound($"Fuel Type is empty with Id = {id}");
+            }
+
+            fuelTypeService.UpdateFuelTypeTimes(id, fuelType);
+
+            return NoContent();
         }
     }
 }

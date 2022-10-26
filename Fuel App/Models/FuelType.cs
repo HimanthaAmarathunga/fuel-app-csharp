@@ -10,5 +10,7 @@ namespace Fuel_App.Models
         [BsonId]
         public string fuelTypeId { get; set; }
         public string fuelTypeName { get; set; }
+        public string fuelArrivalTime { get; set; }
+        public string fuelFinishTime { get; set; }
     }
 }

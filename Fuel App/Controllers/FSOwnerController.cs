@@ -18,7 +18,7 @@ namespace Fuel_App.Controllers
         }
 
         /// <summary>
-        /// Get List of Fuel Station Details List"
+        /// Get List of Fuel Station Details List
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetFuelStationDetailsList")]
@@ -28,10 +28,23 @@ namespace Fuel_App.Controllers
             return fSOwnerService.GetFuelStationDetailsList();
         }
 
+
+        /// <summary>
+        /// Get Fuel Station Details List Filter by Fuel Types
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("{location}/GetFuelStationDetailsListFilterByFuelTypes")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<List<FSOwner>> GetFuelStationDetailsListFilterByFuelTypes(string location)
+        {
+            return fSOwnerService.GetFuelStationDetailsListFilterByFuelTypes(location);
+        }
+
+
         /// <summary>
         /// Get Fuel Station Detail by Id
         /// </summary>
-        /// <param name="fuelType"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}/GetFuelStationDetailById")]
         public ActionResult<FSOwner> GetFuelStationDetailById(string id)
@@ -50,7 +63,7 @@ namespace Fuel_App.Controllers
         /// Update Departure Time
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="fsOwner"></param>
+        /// <param name="fSOwner"></param>
         /// <returns></returns>
         [HttpPut("{id}/UpdateFuelStatus")]
         public ActionResult UpdateFuelStatus(string id, [FromBody] FSOwner fSOwner)
@@ -68,6 +81,11 @@ namespace Fuel_App.Controllers
         }
 
 
+        /// <summary>
+        /// Add Station
+        /// </summary>
+        /// <param name="fsowner"></param>
+        /// <returns></returns>
         [HttpPost("AddStation")]
         public ActionResult<FSOwner> AddStation([FromBody] FSOwner fsowner)
         {
