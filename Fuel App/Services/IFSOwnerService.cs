@@ -1,4 +1,12 @@
-﻿using Fuel_App.Models;
+﻿/*
+ * Fuel App
+ * 
+ * EAD ASSIGNMENT - 2022 
+ * Group - 64
+ * IT19040172 Perera T.W.I.V <it19040172@my.sliit.lk>
+ * IT19035086 Amarathunga A.A.H.S.B. <it19035086@my.sliit.lk>
+ */
+using Fuel_App.Models;
 
 namespace Fuel_App.Services
 {
@@ -7,14 +15,12 @@ namespace Fuel_App.Services
         /// <summary>
         /// Get Fuel Station Details List
         /// </summary>
-        /// <returns></returns>
         List<FSOwner> GetFuelStationDetailsList();
 
 
         /// <summary>
         /// Get Fuel Station Details List Filter by Fuel Types
         /// </summary>
-        /// <returns></returns>
         List<FSOwner> GetFuelStationDetailsListFilterByFuelTypes(string location);
 
 
@@ -22,7 +28,6 @@ namespace Fuel_App.Services
         /// Get Fuel Station Detail by Id
         /// </summary>
         /// <param name="stationId"></param>
-        /// <returns></returns>
         FSOwner GetFuelStationDetailById(string stationId);
 
 
@@ -30,7 +35,6 @@ namespace Fuel_App.Services
         /// Add Fuel Station
         /// </summary>
         /// <param name="fSOwner"></param>
-        /// <returns></returns>
         FSOwner AddStation(FSOwner fSOwner);
 
 

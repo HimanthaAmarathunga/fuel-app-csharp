@@ -1,4 +1,12 @@
-﻿using Fuel_App.Models;
+﻿/*
+ * Fuel App
+ * 
+ * EAD ASSIGNMENT - 2022 
+ * Group - 64
+ * IT19040172 Perera T.W.I.V <it19040172@my.sliit.lk>
+ * IT19035086 Amarathunga A.A.H.S.B. <it19035086@my.sliit.lk>
+ */
+using Fuel_App.Models;
 
 namespace Fuel_App.Services
 {
@@ -8,14 +16,12 @@ namespace Fuel_App.Services
         /// <summary>
         /// Get Fuel Types List
         /// </summary>
-        /// <returns></returns>
         List<FuelType> GetFuelTypesList();
 
         /// <summary>
         /// Get Fuel Type by Id
         /// </summary>
         /// <param name="fuelTypeID"></param>
-        /// <returns></returns>
         FuelType GetFuelTypeById(string fuelTypeID);
 
 
@@ -23,7 +29,6 @@ namespace Fuel_App.Services
         /// Add Fuel Type
         /// </summary>
         /// <param name="fuelType"></param>
-        /// <returns></returns>
         FuelType AddFuelType(FuelType fuelType);
 
 
